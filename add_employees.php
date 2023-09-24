@@ -105,7 +105,8 @@ $username = $_SESSION['admin_name'];
                                             <div class="col-md-4">
                                                 <div class="form-group">
                                                     <label class="form-label">Designation</label>
-                                                    <select name="emp_designation" id="designation" class="form-control">
+                                                    <select name="emp_designation" id="designation"
+                                                        class="form-control">
                                                         <option>Select Designation</option>
                                                         <!-- <?php 
                                                         $departments = mysqli_query($db,"SELECT * FROM `designation` WHERE deletedStatus='0'");
@@ -121,8 +122,20 @@ $username = $_SESSION['admin_name'];
                                             <div class="col-md-4">
                                                 <div class="form-group">
                                                     <label class="form-label">Reporting Member</label>
-                                                    <input type="text" name="emp_reporting" class="form-control"
-                                                        placeholder="Reporting Member Name">
+                                                    <select name="emp_reporting" id="designation" class="form-control">
+                                                        <option>Select Reporting Member</option>
+                                                        <?php 
+                                                        $departments = mysqli_query($db,"SELECT * FROM `users` WHERE deletedStatus='0'");
+                                                        while($read = mysqli_fetch_assoc($departments))
+                                                        {      ?>
+                                                        <option value="<?php echo $read['Name'] ?>">
+                                                            <?php echo $read['Name'] ?> -
+                                                            ( <?php echo $read['Emp_id'] ?> ) -
+                                                            ( <?php echo $read['Emp_designation'] ?> ) -
+                                                            ( <?php echo $read['Emp_deptment'] ?> )
+                                                        </option>
+                                                        <?php } ?>
+                                                    </select>
                                                 </div>
                                             </div> <!-- end col -->
                                         </div>
@@ -207,8 +220,8 @@ $username = $_SESSION['admin_name'];
         <script src="main/js/template.js"></script>
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <script>
-            $(document).ready(function() {
-                $('#department').change(function() {
+            $(document).ready(function () {
+                $('#department').change(function () {
                     var designation = $(this).val();
 
                     // Send an AJAX request to fetch designations based on the selected department
@@ -216,7 +229,7 @@ $username = $_SESSION['admin_name'];
                         type: 'POST',
                         url: 'fetch_designations.php', // Create this PHP file
                         data: { designations: designation },
-                        success: function(data) {
+                        success: function (data) {
                             $('#designation').html(data);
                         }
                     });
