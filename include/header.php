@@ -75,6 +75,7 @@
 						</li> -->
 						<!-- Notifications -->
 						<li class="dropdown notifications-menu">
+						<span class="position-absolute top-15 start-100 translate-middle badge rounded-pill bg-danger">0</span>
 							<a href="#" class="waves-effect waves-light dropdown-toggle" data-bs-toggle="dropdown"
 								title="Notifications">
 								<i class="icon-Notifications"><span class="path1"></span><span class="path2"></span></i>
@@ -86,7 +87,10 @@
 										<div class="flexbox">
 											<div>
 												<h4 class="mb-0 mt-0">Notifications</h4>
+
+
 											</div>
+											
 											<div>
 												<a href="#" class="text-danger">Clear All</a>
 											</div>

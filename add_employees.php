@@ -11,7 +11,6 @@ $username = $_SESSION['admin_name'];
 <!DOCTYPE html>
 <html lang="en">
 <!-- Mirrored from novo-admin-template.multipurposethemes.com/main/forms_general.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 21 Sep 2023 05:48:32 GMT -->
-
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -27,7 +26,6 @@ $username = $_SESSION['admin_name'];
     <link rel="stylesheet" href="main/css/skin_color.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
 </head>
-
 <body class="hold-transition light-skin sidebar-mini theme-primary fixed">
     <div class="wrapper">
         <div id="loader"></div>
@@ -105,7 +103,8 @@ $username = $_SESSION['admin_name'];
                                             <div class="col-md-4">
                                                 <div class="form-group">
                                                     <label class="form-label">Designation</label>
-                                                    <select name="emp_designation" id="designation" class="form-control">
+                                                    <select name="emp_designation" id="designation"
+                                                        class="form-control">
                                                         <option>Select Designation</option>
                                                         <!-- <?php 
                                                         $departments = mysqli_query($db,"SELECT * FROM `designation` WHERE deletedStatus='0'");
@@ -121,8 +120,20 @@ $username = $_SESSION['admin_name'];
                                             <div class="col-md-4">
                                                 <div class="form-group">
                                                     <label class="form-label">Reporting Member</label>
-                                                    <input type="text" name="emp_reporting" class="form-control"
-                                                        placeholder="Reporting Member Name">
+                                                    <select name="emp_reporting" id="designation" class="form-control">
+                                                        <option>Select Reporting Member</option>
+                                                        <?php 
+                                                        $departments = mysqli_query($db,"SELECT * FROM `users` WHERE deletedStatus='0'");
+                                                        while($read = mysqli_fetch_assoc($departments))
+                                                        {      ?>
+                                                        <option value="<?php echo $read['Name'] ?>">
+                                                            <?php echo $read['Name'] ?> -
+                                                            ( <?php echo $read['Emp_id'] ?> ) -
+                                                            ( <?php echo $read['Emp_designation'] ?> ) -
+                                                            ( <?php echo $read['Emp_deptment'] ?> )
+                                                        </option>
+                                                        <?php } ?>
+                                                    </select>
                                                 </div>
                                             </div> <!-- end col -->
                                         </div>
@@ -174,7 +185,6 @@ $username = $_SESSION['admin_name'];
                                             $emp_joining_date = mysqli_real_escape_string($db,$_POST['emp_joining_date']);
                                             $emp_dob = mysqli_real_escape_string($db,$_POST['emp_dob']);
                                             $emp_password = md5($_POST['emp_password']);
-
                                             $add_employee = mysqli_query($db,"INSERT INTO `users` (`ID`, `Emp_id`, `Name`, `Phone_no`, `Email`, `Password`,  `Emp_deptment`, `Emp_designation`, `Date_of_Birth`, `Emp_joining_date`, `Emp_reporting`, `added_by` , `DeletedStatus`, `Created_at`) VALUES (NULL, '$emp_id', '$emp_name', '$emp_phone', '$emp_email', '$emp_password',  '$emp_deptment', '$emp_designation', '$emp_dob', '$emp_joining_date', '$emp_reporting', '$username' ,'0', current_timestamp())");
                                             if($add_employee == TRUE)
                                             {
@@ -184,7 +194,6 @@ $username = $_SESSION['admin_name'];
                                             {
                                                 echo "<script>alert('Employee Not Saved, Try Again')</script>";
                                             }
-                                            
                                         }
                                     ?>
                             </div>
@@ -207,24 +216,21 @@ $username = $_SESSION['admin_name'];
         <script src="main/js/template.js"></script>
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <script>
-            $(document).ready(function() {
-                $('#department').change(function() {
+            $(document).ready(function () {
+                $('#department').change(function () {
                     var designation = $(this).val();
-
                     // Send an AJAX request to fetch designations based on the selected department
                     $.ajax({
                         type: 'POST',
                         url: 'fetch_designations.php', // Create this PHP file
                         data: { designations: designation },
-                        success: function(data) {
+                        success: function (data) {
                             $('#designation').html(data);
                         }
                     });
                 });
             });
         </script>
-
 </body>
 <!-- Mirrored from novo-admin-template.multipurposethemes.com/main/forms_general.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 21 Sep 2023 05:48:32 GMT -->
-
 </html>

@@ -59,232 +59,59 @@ if(empty($admin_id))
 									<p class="mb-0 fs-16 text-purple">Today is Monday, 20 Aug 2023</p>
 								</div>
 							</div>
-							<div class="d-flex ">
-								<button class="btn btn-light me-10 px-15" type="submit" id="button-addon3"><i class="fa fa-search fs-18"></i></button>
-								<button type="button" class="waves-effect waves-light w-p100 btn btn-black px-25 py-15" style="white-space: nowrap;">Add New Project</button>
-							</div>
 						</div>							
 					</div>
 
 					<div class="row mt-xl-35 development-box left-section">
-						<div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-12">
+						<div class="col-xxl-4 col-xl-3 col-lg-3 col-md-6 col-12">
 							<div class="box bg-transparent">
 								<div class="box-body bg-purple p-20 p-xl-30 me-lg-10 me-0 pull-up">
-									<div class="d-flex flex-row justify-content-between">
-										<div class="d-flex">
-											<button type="button" class="waves-effect h-40 w-40  waves-circle btn btn-circle btn-black">+7</button>
-											<a href="#" class="bg-lightest h-40 w-40 l-h-40 rounded-circle text-center overflow-hidden">
-												<img src="../images/avatar/avatar-1.png" class="h-40 align-self-end" alt="">
-											</a>
-											<a href="#" class="bg-lightest h-40 w-40 l-h-40 rounded-circle text-center overflow-hidden avatar-mix">
-												<img src="../images/avatar/avatar-4.png" class="h-40 align-self-end" alt="">
-											</a>
-										</div>
-										<div class="dropdown  ">
-										 	<a data-bs-toggle="dropdown" href="#" aria-expanded="false" class=""><i class="ti-more-alt rotate-90 text-white fs-18 mt-10"></i></a>
-										  	<div class="dropdown-menu dropdown-menu-end" style="">
-												<a class="dropdown-item" href="#"><i class="fa fa-user"></i> Profile</a>
-												<a class="dropdown-item" href="#"><i class="fa fa-picture-o"></i> Shots</a>
-												<a class="dropdown-item" href="#"><i class="ti-check"></i> Follow</a>
-												<div class="dropdown-divider"></div>
-												<a class="dropdown-item" href="#"><i class="fa fa-ban"></i> Block</a>
-										  	</div>
-										</div>
-									</div>
 									<div class="mt-25">
 										<div class="col b-r">
-											<h2 class="font-light fw-500 mb-30">Web<br>Development</h2>
-											<p class="text-light mb-10 mb-0">10 tasks | 80%</p>
-											<div class="progress progress-sm mb-0">
-												<div class="progress-bar progress-bar-white" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
-												</div>
-											</div>
+											<h2 class="font-light fw-500 mb-30">12 tasks</h2>
+											<p class="text-light mb-10 mb-0">Total Employee</p>
 										</div>
 									</div>
 								</div>
 							</div>
 						</div>
-						<div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-12">
+						<div class="col-xxl-4 col-xl-3 col-lg-3 col-md-6 col-12">
 							<div class="box bg-transparent">
 								<div class="box-body bg-skyblue p-20 p-xl-30 me-lg-5 me-0 pull-up">
-									<div class="d-flex flex-row justify-content-between">
-										<div class="d-flex">
-											<button type="button" class="waves-effect h-40 w-40  waves-circle btn btn-circle btn-black">+9</button>
-											<a href="#" class="bg-lightest h-40 w-40 l-h-40 rounded-circle text-center overflow-hidden">
-												<img src="../images/avatar/avatar-2.png" class="h-40 align-self-end" alt="">
-											</a>
-											<a href="#" class="bg-lightest h-40 w-40 l-h-40 rounded-circle text-center overflow-hidden avatar-mix">
-												<img src="../images/avatar/avatar-3.png" class="h-40 align-self-end" alt="">
-											</a>
-										</div>
-										<div class="dropdown  ">
-										 	<a data-bs-toggle="dropdown" href="#" aria-expanded="false" class=""><i class="ti-more-alt rotate-90 text-white fs-18 mt-10"></i></a>
-										  	<div class="dropdown-menu dropdown-menu-end" style="">
-												<a class="dropdown-item" href="#"><i class="fa fa-user"></i> Profile</a>
-												<a class="dropdown-item" href="#"><i class="fa fa-picture-o"></i> Shots</a>
-												<a class="dropdown-item" href="#"><i class="ti-check"></i> Follow</a>
-												<div class="dropdown-divider"></div>
-												<a class="dropdown-item" href="#"><i class="fa fa-ban"></i> Block</a>
-										  	</div>
-										</div>
-									</div>
 									<div class="mt-25">
 										<div class="col b-r">
-											<h2 class="font-light fw-500 mb-30">Mobile App<br>Design</h2>
-											<p class="text-white mb-10 mb-0">12 tasks | 46%</p>
-											<div class="progress progress-sm mb-0">
-												<div class="progress-bar progress-bar-white" role="progressbar" aria-valuenow="46" aria-valuemin="0" aria-valuemax="100" style="width: 46%">
-												</div>
-											</div>
+											<h2 class="font-light fw-500 mb-30">12 tasks</h2>
+											<p class="text-white mb-10 mb-0">Total Tasks</p>
 										</div>
 									</div>
 								</div>
 							</div>
 						</div>
-						<div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-12">
+						<div class="col-xxl-4 col-xl-3 col-lg-3 col-md-6 col-12">
 							<div class="box bg-transparent">
 								<div class="box-body bg-orange p-20 p-xl-30 ms-lg-5 me-0 pull-up">
-									<div class="d-flex flex-row justify-content-between">
-										<div class="d-flex">
-											<button type="button" class="waves-effect h-40 w-40  waves-circle btn btn-circle btn-black">+3</button>
-											<a href="#" class="bg-lightest h-40 w-40 l-h-40 rounded-circle text-center overflow-hidden">
-												<img src="../images/avatar/avatar-1.png" class="h-40 align-self-end" alt="">
-											</a>
-											<a href="#" class="bg-lightest h-40 w-40 l-h-40 rounded-circle text-center overflow-hidden avatar-mix">
-												<img src="../images/avatar/avatar-4.png" class="h-40 align-self-end" alt="">
-											</a>
-										</div>
-										<div class="dropdown  ">
-										 	<a data-bs-toggle="dropdown" href="#" aria-expanded="false" class=""><i class="ti-more-alt rotate-90 text-white fs-18 mt-10"></i></a>
-										  	<div class="dropdown-menu dropdown-menu-end" style="">
-												<a class="dropdown-item" href="#"><i class="fa fa-user"></i> Profile</a>
-												<a class="dropdown-item" href="#"><i class="fa fa-picture-o"></i> Shots</a>
-												<a class="dropdown-item" href="#"><i class="ti-check"></i> Follow</a>
-												<div class="dropdown-divider"></div>
-												<a class="dropdown-item" href="#"><i class="fa fa-ban"></i> Block</a>
-										  	</div>
-										</div>
-									</div>
 									<div class="mt-25">
 										<div class="col b-r">
-											<h2 class="font-light fw-500 mb-30">Facebook<br>Brand UI Kit</h2>
-											<p class="text-white mb-10 mb-0">22 tasks | 73%</p>
-											<div class="progress progress-sm mb-0">
-												<div class="progress-bar progress-bar-white" role="progressbar" aria-valuenow="73" aria-valuemin="0" aria-valuemax="100" style="width: 73%">
-												</div>
-											</div>
+											<h2 class="font-light fw-500 mb-30">12 tasks</h2>
+											<p class="text-white mb-10 mb-0">Completed Tasks</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-xxl-4 col-xl-3 col-lg-3 col-md-6 col-12">
+							<div class="box bg-transparent">
+								<div class="box-body bg-skyblue p-20 p-xl-30 me-lg-5 me-0 pull-up">
+									<div class="mt-25">
+										<div class="col b-r">
+											<h2 class="font-light fw-500 mb-30">12 tasks</h2>
+											<p class="text-white mb-10 mb-0">Ongoing Tasks</p>
 										</div>
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
-
-					<div class="row mt-xl-35 left-section-1">
-						<div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 left-task-section">
-							<div class="box-header bb-0 px-0 mb-10">
-								<h3 class="text-darkpurple fw-600">Tasks for today</h3>
-							</div>
-							<div >
-								<div class="box mb-25 bs-8 border-orange">
-									<div class="box-body">
-										<div class="d-flex align-items-center justify-content-between">
-											<div class="d-flex flex-column">
-												<a href="#" class="text-darkpurple fw-600 hover-primary mb-1 fs-18">Mobile App</a>
-											</div>
-											<div>
-										        <label class="container">
-												  <input type="checkbox">
-												  <span class="checkmark"></span>
-												</label>
-										    </div>
-										</div>
-										<p class="text-purple mt-10 fs-16">Prepare Figma File</p>
-									</div>
-								</div>
-								<div class="box mb-25 bs-8 border-purple">
-									<div class="box-body">
-										<div class="d-flex align-items-center justify-content-between">
-											<div class="d-flex flex-column">
-												<a href="#" class="text-darkpurple fw-600 hover-primary mb-1 fs-18">UX wireframes</a>
-											</div>
-											<div>
-												<label class="container">
-												  <input type="checkbox">
-												  <span class="checkmark"></span>
-												</label>
-											</div>
-										</div>
-										<p class="text-purple mt-10 fs-16">Design Ux wireframes</p>
-									</div>
-								</div>
-								<div class="box mb-25 bs-8 border-skyblue">
-									<div class="box-body">
-										<div class="d-flex align-items-center justify-content-between">
-											<div class="d-flex flex-column">
-												<a href="#" class="text-darkpurple fw-600 hover-primary mb-1 fs-18">Mobile App</a>
-											</div>
-											<div>
-												<label class="container">
-												  <input type="checkbox" checked="checked">
-												  <span class="checkmark"></span>
-												</label>
-											</div>
-										</div>
-										<p class="text-purple mt-10 fs-16">Research</p>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 left-task-section">
-							<div class="box-header bb-0 px-0 mb-10">
-								<h3 class="text-darkpurple fw-600">Statistics</h3>
-							</div>
-							<div class="row">
-								<div class="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-4">
-									<div class="box box-body bg-light">
-										<div class="text-left">
-										  	<h3 class="countnm mb-15 mt-5 fw-600">28 h </h3>
-										  	<p class="text-purple mb-0 fs-16" >Tracked<br>time</p>
-										</div>
-									</div>
-								</div>
-								<div class="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-4">
-									<div class="box box-body  bg-light">
-										<div class="text-left">
-										  	<h3 class="countnm mb-15 mt-5 fw-600">18</h3>
-										  	<p class="text-purple mb-0 fs-16" >Finished<br>tasks</p>
-										</div>
-									</div>
-								</div>
-								<div class="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-4">
-									<div class="box-body b-3 b-dashed border-lightfade ">
-										<div class="text-left">
-										  	<button type="button" class="waves-effect h-30 w-30 mb-15 l-h-20   waves-circle btn btn-circle btn-black">+</button>
-										  	<p class="text-purple mb-0 fs-16" >New<br>widget</p>
-										</div>
-									</div>
-								</div>
-								<div class="col-xxl-12 mt-20 mb-lg-20 mb-10 ">
-									<div class="box box-body image-section">
-										<div class="row">
-											<div class="col-6">
-												<div class="text-left">
-												  	<h3 class="countnm mb-20 mt-5 fw-600">$9.99 <small><b>p/m</b></small></h3>
-												  	<p class="text-purple mb-10 fw-600 fs-16" >Pro Plan</p>
-												  	<p class="text-purple mb-0 fs-16 mb-10" >More productivity<br>with premium!</p>
-												</div>
-											</div>
-											<div class="col-6">
-												<div sty></div>
-											</div>
-										</div>
-										
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>										
 				</div>
 
 				
@@ -300,22 +127,8 @@ if(empty($admin_id))
 											<div class="mb-25 right-section">
 												<div class=" no-shadow mb-0">
 													<div class="px-0 d-flex box-header justify-content-between no-border mb-30">
-														<p class="m-0 fs-16 text-purple">Pending Tasks</p>
-														<!-- <div class="dropdown me-1">
-															<a data-bs-toggle="dropdown" href="#" aria-expanded="false"
-																class=""><i class="ti-more-alt mt-5 "></i></a>
-															<div class="dropdown-menu dropdown-menu-end" style="">
-																<a class="dropdown-item" href="#"><i
-																		class="fa fa-user"></i> Profile</a>
-																<a class="dropdown-item" href="#"><i
-																		class="fa fa-picture-o"></i> Shots</a>
-																<a class="dropdown-item" href="#"><i
-																		class="ti-check"></i> Follow</a>
-																<div class="dropdown-divider"></div>
-																<a class="dropdown-item" href="#"><i
-																		class="fa fa-ban"></i> Block</a>
-															</div>
-														</div> -->
+														<p class="m-0 fs-16 text-purple">Ongoing Tasks</p>
+														
 													</div>
 												</div>
 												<a href="#">
@@ -413,9 +226,6 @@ if(empty($admin_id))
 													</div>
 												</div>
 												<div class="row">
-													<!-- <div class="col-xxl-3 col-lg-4 col-md-4 col-4">
-														<h4 class="fw-600 text-darkpurple">10:00</h4>
-													</div> -->
 													<div class="col-xxl-9 col-lg-8 col-md-8 col-8 mb-30">
 														<div class="bs-5 border-primary ps-10">
 															<p class="text-purple fs-16 mb-5">UX Research</p>

@@ -6,6 +6,7 @@ $admin_id = $_SESSION['admin_id'];
 if (empty($admin_id)) {
     header('Location: index.php');
 }
+$user = $_SESSION['admin_name'];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -76,7 +77,7 @@ if (empty($admin_id)) {
                                                 </tr>
                                             </thead>
                                                 <?php 
-                                                    $show_emp = mysqli_query($db,"SELECT * FROM `users` WHERE DeletedStatus='0' AND Emp_designation !='Admin' ORDER BY ID DESC");
+                                                    $show_emp = mysqli_query($db,"SELECT * FROM `users` WHERE DeletedStatus='0' AND Name !='$user' ORDER BY ID DESC");
                                                     $count = 1;
                                                     while($read = mysqli_fetch_assoc($show_emp))
                                                     {

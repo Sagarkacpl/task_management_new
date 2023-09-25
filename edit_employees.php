@@ -61,25 +61,32 @@ $record_id = $_GET['id'];
                                             <div class="col-md-3">
                                                 <div class="form-group">
                                                     <label class="form-label">Employee ID</label>
-                                                    <input type="text" name="emp_id" class="form-control" value="<?php echo $execute['Emp_id']; ?>" placeholder="Employee ID">
+                                                    <input type="text" name="emp_id" class="form-control"
+                                                        value="<?php echo $execute['Emp_id']; ?>"
+                                                        placeholder="Employee ID">
                                                 </div>
                                             </div>
                                             <div class="col-md-3">
                                                 <div class="form-group">
                                                     <label class="form-label">Name</label>
-                                                    <input type="text" name="emp_name" class="form-control" value="<?php echo $execute['Name']; ?>" placeholder="Employee Name">
+                                                    <input type="text" name="emp_name" class="form-control"
+                                                        value="<?php echo $execute['Name']; ?>"
+                                                        placeholder="Employee Name">
                                                 </div>
                                             </div> <!-- end col -->
                                             <div class="col-md-3">
                                                 <div class="form-group">
                                                     <label class="form-label">Email ID</label>
-                                                    <input type="text" name="emp_email" class="form-control"  value="<?php echo $execute['Email']; ?>" placeholder="Email ID">
+                                                    <input type="text" name="emp_email" class="form-control"
+                                                        value="<?php echo $execute['Email']; ?>" placeholder="Email ID">
                                                 </div>
                                             </div> <!-- end col -->
                                             <div class="col-md-3">
                                                 <div class="form-group">
                                                     <label class="form-label">Phone No</label>
-                                                    <input type="text" name="emp_phone" class="form-control"  value="<?php echo $execute['Phone_no']; ?>" placeholder="Phone No">
+                                                    <input type="text" name="emp_phone" class="form-control"
+                                                        value="<?php echo $execute['Phone_no']; ?>"
+                                                        placeholder="Phone No">
                                                 </div>
                                             </div> <!-- end col -->
                                         </div>
@@ -92,7 +99,6 @@ $record_id = $_GET['id'];
                                                         <option>Select Department</option>
                                                         <?php
                                                             $selectedDepartment = $execute['Emp_deptment']; // Assuming you have a selected department value
-                                                            
                                                             $departments = mysqli_query($db, "SELECT * FROM `department` WHERE deletedStatus='0'");
                                                             while ($read = mysqli_fetch_assoc($departments)) {
                                                                 $departmentName = htmlspecialchars($read['department_name']);
@@ -110,7 +116,6 @@ $record_id = $_GET['id'];
                                                         <option>Select Designation</option>
                                                         <?php
                                                             $selectedDesignation = $execute['Emp_designation']; // Assuming you have a selected designation value
-                                                            
                                                             $designations = mysqli_query($db, "SELECT * FROM `designation` WHERE deletedStatus='0'");
                                                             while ($read = mysqli_fetch_assoc($designations)) {
                                                                 $designationName = htmlspecialchars($read['designation_name']);
@@ -124,7 +129,25 @@ $record_id = $_GET['id'];
                                             <div class="col-md-4">
                                                 <div class="form-group">
                                                     <label class="form-label">Reporting Member</label>
-                                                    <input type="text" name="emp_reporting" class="form-control"  value="<?php echo $execute['Emp_reporting']; ?>" placeholder="Reporting Member Name">
+                                                    <?php
+                                                        $selectedReporting = $execute['Emp_reporting']; // Assuming you have a selected reporting member value
+                                                        $reportingMembers = mysqli_query($db, "SELECT * FROM `users` WHERE deletedStatus='0'");
+                                                    ?>
+                                                    <select name="emp_reporting" id="designation" class="form-control">
+                                                        <option>Select Reporting Member</option>
+                                                        <?php while ($read4 = mysqli_fetch_assoc($reportingMembers)) {
+                                                            $reportingName = htmlspecialchars($read4['Name']);
+                                                            $isSelected = ($reportingName == $selectedReporting) ? 'selected' : '';
+                                                        ?>
+                                                        <option value="<?php echo $reportingName ?>" <?php echo
+                                                            $isSelected ?>>
+                                                            <?php echo $read4['Name'] ?> -
+                                                            ( <?php echo $read4['Emp_id'] ?> ) -
+                                                            ( <?php echo $read4['Emp_designation'] ?> ) -
+                                                            ( <?php echo $read4['Emp_deptment'] ?> )
+                                                        </option>
+                                                        <?php } ?>
+                                                    </select>
                                                 </div>
                                             </div> <!-- end col -->
                                         </div>
@@ -133,13 +156,17 @@ $record_id = $_GET['id'];
                                             <div class="col-md-4">
                                                 <div class="form-group">
                                                     <label class="form-label">Date of Joining </label>
-                                                    <input type="date" name="emp_joining_date" id="" value="<?php echo $execute['Emp_joining_date']; ?>" class="form-control">
+                                                    <input type="date" name="emp_joining_date" id=""
+                                                        value="<?php echo $execute['Emp_joining_date']; ?>"
+                                                        class="form-control">
                                                 </div>
                                             </div>
                                             <div class="col-md-4">
                                                 <div class="form-group">
                                                     <label class="form-label">Date of Birth </label>
-                                                    <input type="date" name="emp_dob" id="" value="<?php echo $execute['Date_of_Birth']; ?>" class="form-control">
+                                                    <input type="date" name="emp_dob" id=""
+                                                        value="<?php echo $execute['Date_of_Birth']; ?>"
+                                                        class="form-control">
                                                 </div>
                                             </div>
                                             <div class="col-md-4">
@@ -175,7 +202,6 @@ $record_id = $_GET['id'];
                                             $emp_joining_date = mysqli_real_escape_string($db,$_POST['emp_joining_date']);
                                             $emp_dob = mysqli_real_escape_string($db,$_POST['emp_dob']);
                                             // $emp_password = '';
-
                                             // Check if a new password is provided
                                             if (!empty($_POST['emp_password'])) {
                                                 $emp_password = md5($_POST['emp_password']);
@@ -183,7 +209,6 @@ $record_id = $_GET['id'];
                                                 // If no new password is provided, use the existing password
                                                 $emp_password = $execute['Password'];
                                             }
-
                                             $edit_employee = mysqli_query($db,"UPDATE `users` SET `Emp_id` = '$emp_id', `Name` = '$emp_name', `Phone_no` = '$emp_phone', `Email` = '$emp_email', `Password` = '$emp_password', `Emp_deptment` = '$emp_deptment', `Emp_designation` = '$emp_designation', `Date_of_Birth` = '$emp_dob', `Emp_reporting` = '$emp_reporting' WHERE `ID` = '$record_id'");
                                             if($edit_employee == TRUE)
                                             {
@@ -193,7 +218,6 @@ $record_id = $_GET['id'];
                                             {
                                                 echo "<script>alert('Employee Not Updated, Try Again')</script>";
                                             }
-                                            
                                         }
                                     ?>
                             </div>

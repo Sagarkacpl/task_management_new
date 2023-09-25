@@ -16,12 +16,12 @@ $read = mysqli_fetch_assoc($nav_bar_valdate);
 								<a href="dashboard.php">
 									<i class="icon-Layout-4-blocks"><span class="path1"></span><span
 											class="path2"></span></i>
-									<span>Dashboard <?php echo $read['Emp_designation']; ?></span>
+									<span>Dashboard</span>
 								</a>								
 							</li>
 							<?php
 								if (isset($read['Emp_designation'])) {
-									if ($read['Emp_designation'] === 'Admin') {
+									if ($read['Emp_designation'] === 'Owner') {
 							?>
 							<li class="treeview">
 								<a href="#">
